@@ -1,0 +1,93 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SLPN Store Checkout</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to right, #222, #444);
+      color: white;
+    }
+
+    .container {
+      background: #111;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #00000066;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input {
+      background: #333;
+      color: white;
+    }
+
+    button {
+      background: #00e676;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #00c853;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>M-Pesa Checkout</h2>
+    <input type="text" id="phone" placeholder="Enter Safaricom number" />
+    <input type="number" id="amount" placeholder="Amount (KES)" />
+    <button onclick="submitPayment()">Pay Now</button>
+    <p id="result" style="margin-top:1rem; font-size:0.9rem;"></p>
+  </div>
+
+  <script>
+    async function submitPayment() {
+      const phone = document.getElementById('phone').value;
+      const amount = document.getElementById('amount').value;
+
+      const resEl = document.getElementById('result');
+      resEl.innerText = 'Processing...';
+
+      try {
+        const response = await fetch('/api/mpesa/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone, amount })
+        });
+
+        const data = await response.json();
+        resEl.innerText = data.message || JSON.stringify(data);
+      } catch (err) {
+        resEl.innerText = '❌ Error submitting payment';
+      }
+    }
+  </script>
+</body>
+</html>
