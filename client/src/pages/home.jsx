@@ -4,7 +4,7 @@ import "../assets/styles.css";
 const products = [
   { id: 1, name: "T-Handle Tool", price: "1400", image: "/img1.png" },
   { id: 2, name: "Cyber$3x!2K!Tee", price: "2200", image: "/img2.png", soldOut: true },
-  { id: 3, name: "T-Handle Tool", price: "1400", image: "/img3.png" },
+  { id: 3, name: "Cyber$3x!2K!UV HEAT SLEEVES", price: "1400", image: "/img3.png" },
   { id: 4, name: "T-Handle Tool", price: "1400", image: "/img1.png" },
 ];
 
@@ -83,11 +83,11 @@ export default function Home() {
                   <p>1. Go to <strong>Lipa na M-PESA</strong></p>
                   <p>2. Select <strong>Paybill</strong></p>
                   <p>
-                    3. Business Number: <span className="font-semibold">123456</span>{" "}
+                    3. Business Number: <span className="font-semibold">303030</span>{" "}
                     <button onClick={() => navigator.clipboard.writeText("123456")} className="text-blue-400 underline text-xs ml-1">Copy</button>
                   </p>
                   <p>
-                    4. Account Number: <span className="font-semibold">ORDER{product.id}</span>{" "}
+                    4. Account Number: <span className="font-semibold">2053863518>{product.id}</span>{" "}
                     <button onClick={() => navigator.clipboard.writeText(`ORDER${product.id}`)} className="text-blue-400 underline text-xs ml-1">Copy</button>
                   </p>
                   <p>
