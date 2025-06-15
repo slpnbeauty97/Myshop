@@ -42,7 +42,7 @@ export default function Home() {
         <div className="relative z-10 flex h-full w-full items-center justify-between px-10 max-w-7xl mx-auto">
           <h1 className="text-7xl font-extrabold max-w-xl">My Store</h1>
           <p className="text-right max-w-sm text-gray-300 text-lg">
-            With a focus on quality and design, we curate products that enhance your everyday.
+            From Chrx! Latest Album! Shop Some lovely Merch!
           </p>
         </div>
       </section>
