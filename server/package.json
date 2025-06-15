@@ -94,6 +94,7 @@
     "statuses": "^2.0.1",
     "toidentifier": "^1.0.1",
     "toposort-class": "^1.0.1",
+    "type": "module",
     "type-is": "^1.6.18",
     "undici-types": "^7.8.0",
     "unpipe": "^1.0.0",
