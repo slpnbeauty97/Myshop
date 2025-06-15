@@ -24,13 +24,24 @@ export default function Home() {
   return (
     <div className="bg-[#121212] text-white min-h-screen font-sans">
       {/* Navbar */}
-      <header className="flex items-center justify-between px-8 py-5 border-b border-gray-800">
-        <nav className="space-x-8 text-sm font-medium text-white">
-          <a href="#">Home</a>
-          <a href="#">Catalog</a>
-          <a href="#">Contact</a>
-        </nav>
-      </header>
+     <header className="bg-black px-6 md:px-12 py-5 border-b border-gray-800 flex justify-between items-center">
+  {/* Logo or Brand */}
+  <div className="text-white text-xl font-bold tracking-tight">
+    MyStore
+  </div>
+
+  {/* Navigation Links */}
+  <nav className="hidden md:flex gap-8 text-sm font-medium text-white">
+    <a href="#" className="hover:text-gray-400 transition">Home</a>
+    <a href="#" className="hover:text-gray-400 transition">Catalog</a>
+    <a href="#" className="hover:text-gray-400 transition">Contact</a>
+  </nav>
+
+  {/* Mobile Menu Icon (Optional) */}
+  <div className="md:hidden text-white text-2xl">
+    <i className="ri-menu-line"></i>
+  </div>
+</header>
 
       {/* Hero */}
       <section className="relative h-[80vh] bg-black">
