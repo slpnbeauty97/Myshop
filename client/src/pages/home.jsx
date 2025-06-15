@@ -51,7 +51,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover brightness-50"
         />
         <div className="relative z-10 flex h-full w-full items-center justify-between px-10 max-w-7xl mx-auto">
-          <h1 className="text-7xl font-extrabold max-w-xl">My Store</h1>
+          <h1 className="text-7xl font-extrabold max-w-xl">My Merch</h1>
           <p className="text-right max-w-sm text-gray-300 text-lg">
             From Chrx! Latest Album! Shop Some lovely Merch!
           </p>
