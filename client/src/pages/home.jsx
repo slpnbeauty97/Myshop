@@ -26,9 +26,9 @@ export default function Home() {
       {/* Navbar */}
     <header className="flex items-center justify-between px-8 py-5 border-b border-gray-800">
   <nav className="space-x-8 text-sm font-medium text-white">
-    <a href="#">Home</a>
-    <a href="#">Catalog</a>
-    <a href="#">Contact</a>
+    <a href="https://christo4ryoung.store/">Home</a>
+    <a href="https://soundcloud.com/slpnbeauty/sets/cybers3x2k">Catalog</a>
+    <a href="https://www.instagram.com/slpn.beauty">Contact</a>
   </nav>
 </header>
 
